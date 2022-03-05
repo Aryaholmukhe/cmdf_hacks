@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbutton from './navbutton.js';
+import Header from './header';
+import ExploreButtons from './exploreButton';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div><Navbutton /></div>
+    
+      <div><Header /></div>
+
+      <div class="flex-btns">
+        <ExploreButtons txt="Traditional Budgeting" />
+        <ExploreButtons txt="50/30/20 Plan" />
+        <ExploreButtons txt="80/20 Plan" />
+      </div>
+
     </div>
   );
 }
