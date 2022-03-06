@@ -7,13 +7,15 @@ function eighty_twenty (income, savings_choice, expenses_choice) {
     let save = 0.2;
     let expense = 0.8;
     let current_month = 1;
-    let goal_achieved = false;
+    let goal_achieved = false; 
+    var string = ``;
   
     while (goal_achieved == false) {
       for (let i = 0; i < 2; i++) {
         let savings = income * save;
         let expenses = income * expense;
         final = "Month " + current_month + ": " + savings + " (savings), " + expenses + " (expenses)\n";
+        string += final;
         current_month += 1;
       }
       if (savings_choice == save && expenses_choice == expense) {
@@ -23,6 +25,8 @@ function eighty_twenty (income, savings_choice, expenses_choice) {
       save += 0.1;
       expense -= 0.1;
     }  
+
+    return string;
 }
 
 export default function Et() {
@@ -32,7 +36,9 @@ export default function Et() {
     let [expensesChoice, setExpensesChoice] = useState(0);
 
     function submitFunction() {
-        eighty_twenty(Number(income), Number(savingsChoice)/100, Number(expensesChoice)/100);
+        final = eighty_twenty(Number(income), Number(savingsChoice)/100, Number(expensesChoice)/100);
+        console.log(final)
+        document.getElementById('final2').innerHTML = final;
     }
 
     return (
@@ -55,7 +61,7 @@ export default function Et() {
             </button>
 
             <div>
-                <p className="ans" >{final}</p>
+                <p id='final3' >{final}</p>
             </div>
             </div>
             </div>
