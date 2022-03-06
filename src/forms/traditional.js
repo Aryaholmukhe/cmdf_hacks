@@ -4,24 +4,22 @@ import Description from "./descrip"
 
 let saving, final;
 function trad(income, entertainment, groceries, bills, savings_goal) {
-  console.log(income);
-  console.log(entertainment);
-  console.log(groceries);
-  console.log(bills);
-  console.log(savings_goal);
   let net_savings = Number(income) - (Number(entertainment) + Number(groceries) + Number(bills));
-  console.log(net_savings);
-  let savings_diff = Number(net_savings) - Number(savings_goal);
-  console.log(savings_diff);
 
-  if (savings_diff >= savings_goal) {
-    saving = savings_goal - savings_diff;
-    return "GOOD JOB!"
-  } else {
-    saving = savings_goal+savings_diff;
-    return "ELIANA POOP IS SAD!";
+  if (net_savings > savings_goal) {
+    let savings_diff = Number(net_savings) - Number(savings_goal);
+    var string1 = `Good Job! You saved more than your goal by ${savings_diff}.`;
+    return <h1>{string1}</h1>;
+  } else if(net_savings<savings_goal){
+    let savings_diff = Number(net_savings) - Number(savings_goal);
+    var string2 = `Are you kidding me? Save more by ${savings_diff}, spend less!`;
+    return <h1>{string2}</h1>;
+  }else{
+    var string3 = "Not Bad! You saved just as much as you said that you would.";
+    return <h1>{string3}</h1>;
   }
 }
+
 
 export default function Traditional() {
 
@@ -31,7 +29,10 @@ export default function Traditional() {
   let [bills, setBills] = useState(0);
   let [savGoal, setSavgoal] = useState(0);
   function submitFunction() {
-    final = JSON.stringify(trad(income, entertain, groc, bills, savGoal));
+    final = trad(income, entertain, groc, bills, savGoal);
+    final = final.props.children;
+    console.log(saving);
+    document.getElementById('final').innerHTML = final;
   }
 
 
@@ -63,13 +64,11 @@ export default function Traditional() {
             <button className='sbt-btn-1' onClick={submitFunction}>
               <span class="submit"><a></a></span>
             </button>
-            <h1>Here {saving}</h1>
+            <div id='final'></div>
           </div>
+
         </div>
       </div>
-
-
-
     </div>
 
   )

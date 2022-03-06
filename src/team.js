@@ -1,10 +1,12 @@
 import React from 'react';
 
+export default function Team(props) {
+    return (
+        <div className="person">
+            <img src={props.img} />
+            <p>{props.content}</p>
+        </div>
 
-<div className="team">
-    <div className="arya">
-        <img src="" />
-    </div>
-    <div className="prerana"></div>
-    <div className="eliana"></div>
-</div>
+    )
+}
+

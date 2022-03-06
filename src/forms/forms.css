@@ -158,3 +158,6 @@ input{
   transform: translateZ(-25px) rotateX(-90deg);
 }
 
+.final{
+  padding: 5%;
+}
