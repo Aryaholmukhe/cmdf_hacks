@@ -1,77 +1,160 @@
 .all {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2%;
-  }
-  
-  .ask {
-    flex: 50%;
-  }
-  .inputItem{
-      margin: 5%;
-  }
-  input{
-      margin-top: 5%;
-      padding-bottom: 5%;
-  }
-  
-  .ans {
-    flex: 50%;
-  }
-  
-  /* Responsive layout - makes a one column layout instead of a two-column layout */
-  @media (max-width: 800px) {
-    .ask, .ans {
-      flex: 100%;
-    }
+    
+
   }
 
-  /* input styling */
-  *,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  font-size: 62,5%;
+.desc {
+  vertical-align: middle;
 }
+  
+.inputItem{
+  margin: 5%;
+} 
 
-
-.form__label {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  margin-left: 2rem;
-  margin-top: 0.7rem;
-  display: block;
-  transition: all 0.3s;
-  transform: translateY(0rem);
+input{
+  margin: 3%;
+  padding: 4%;
   color: white;
 }
-
-.form__input {
-  font-family: 'Roboto', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 1.2rem;
-	margin: 0 auto;
-  padding: 1.5rem 2rem;
-  border-radius: 0.2rem;
-  background-color: rgba(255, 255, 255, 0);
-  border: 0.5px solid white;
-  width: 90%;
-  display: block;
-  /* border-bottom: 0.3rem solid transparent; */
-  transition: all 0.3s;
-}
-.form__input::placeholder{
-    color: white;
-}
-.form__input:placeholder-shown + .form__label {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-4rem);
-  transform: translateY(-4rem);
-}
-
+  
 .add{
-    padding: 5%;
+  padding: 5%;
 }
+.ans {
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .ask, .ans {
+    flex: 100%;
+  }
+}
+
+/* input styling */
+.flip-card-back>input{
+  background-color: transparent;
+  border: 0.5px solid white;
+  border-radius: 2%;
+}
+
+
+/* input styling ending */
+
+/* flip card */
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 600px;
+  perspective: 1000px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #15616D;
+  color: #FFECD1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  background-color: #15616D;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back > Inputs {
+  padding: 0;
+}
+/* end of flip card */
+
+
+
+
+
+.sbt-btn {
+  /* margin-top: 64px; */
+}
+
+.sbt-btn-1 {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+.submit{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  margin-top: 7%;
+  perspective: 1000px;
+  bottom: 0;
+}
+.submit a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.submit a:before,
+.submit a:after{
+  position: absolute;
+  content: "SUBMIT";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #FF7D00;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.submit a:before{
+  color: #fff;
+  background: #FF7D00;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.submit a:after{
+  color: #FF7D00;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.submit a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+

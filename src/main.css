@@ -17,17 +17,24 @@ body{
 
 .header{
     text-align: center;
+
 }
 
 .header > h1 {
     font-size: 144px;
+    margin: 5%;
     /* border: 1px solid #F1FAEE; */
     
 }
 
 .header > h4 {
     font-size: 32px;
-    padding-bottom: 350px;
+    padding-bottom: 20%;
+}
+
+.word_decor{
+    text-decoration-line: underline;
+    text-decoration-color: #FF7D00;
 }
 
 .nav, .menu {
@@ -38,7 +45,7 @@ body{
 }
 
 .nav {
-    position: fixed;
+    position: absolute;
     margin-left: 1.5%;
     margin-top: 1.5%;
     background-color: #F1FAEE;
@@ -47,6 +54,7 @@ body{
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 5px 5px 0px #457B9D;
+    z-index: 99;
 }
 .nav:hover{
     box-shadow: 1px 1px 20px #457B9D;

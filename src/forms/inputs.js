@@ -1,4 +1,5 @@
 import React from 'react';
+import Description from "./descrip"
 
 export default function Inputs(props) {
     return (

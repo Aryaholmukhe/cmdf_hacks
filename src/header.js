@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbutton.css";
+import "./main.css";
 
 export default function Header(){
     return(
@@ -9,7 +9,7 @@ export default function Header(){
         </nav></div>
         <div className="header">
             <h1>MoneyBack</h1>
-            <h4>Helping Others Pay Off Debt Caused by Job-Layoff by Spreading Awareness about Budgeting Methods</h4>
+            <h4>Helping Others Pay Off Debt Caused by Job-Layoff by using <span className="word_decor">Budgeting Methods</span> and <span className="word_decor">Techniques</span></h4>
             {/* <li>Assist individuals and families </li> */}
             </div>
         </div>

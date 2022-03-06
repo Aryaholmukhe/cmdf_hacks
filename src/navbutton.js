@@ -1,5 +1,5 @@
 import React from 'react';
-import './navbutton.css';
+import './main.css';
 
 export default function Navbutton(){
     return (
@@ -8,11 +8,11 @@ export default function Navbutton(){
           <span></span>
           <span></span>
           <div class="menu">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">cursos</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contactos</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="#">planner</a></li>
+            <li><a href="#">team</a></li>
+            <li><a href="#">contact</a></li>
           </div>
       </div>
 

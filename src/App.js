@@ -4,23 +4,17 @@ import Header from './header';
 import ExploreButtons from './exploreButton';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Traditional from './forms/traditional'
+import Ftt from './forms/ftt';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <div><Navbutton /></div>
-
-
-
-
         <div class="flex-btns">
-
-
-
           <Switch>
             <Route exact path="/">
-              <div><Header /></div>
+              <div id="home"><Header /></div>
               <h1>Explore Budgeting Methods</h1>
 
               <ExploreButtons link="/traditional" txt="Traditional Budgeting" />
@@ -31,10 +25,17 @@ function App() {
             <Route exact path="/traditional">
               <Traditional></Traditional>
             </Route>
+            <Route exact path="/ftt">
+              <Ftt></Ftt>
+            </Route>
+            <Route exact path="/et">
+              <Ftt></Ftt>
+            </Route>
           </Switch>
 
         </div>
 
+        
       </div>
 
 
