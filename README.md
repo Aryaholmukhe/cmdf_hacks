@@ -3,4 +3,4 @@ A trio of avid programmers participating in the cmd-f hackathon.
 
 **FIND us...** 
 add links to other profiles
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![ourbanner](https://gyazo.com/a93213664fbfb5e8cd8f4aec5ad9f583)
