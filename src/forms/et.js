@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './forms.css';
-import Description from 'descrip';
+import Description from "./descrip"
 
 let final;
 function eighty_twenty (income, savings_choice, expenses_choice) {
