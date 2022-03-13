@@ -12,7 +12,7 @@ export default function Navbutton() {
           <span></span>
           <span></span>
           <div class="menu">
-            <li><a href="/">home</a></li>
+            <li><a href="/">maison</a></li>
             <li><a href="/about">about</a></li>
             <li><a href="/planner">planner</a></li>
             <li><a href="/team">team</a></li>
