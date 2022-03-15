@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Gorditas&family=Limelight&family=Paytone+One&display=swap');
+
+body {
+ background-color: #001524; 
+ color: #ffffff;
+ font-family: 'Quicksand', sans-serif;
+ letter-spacing: 1.5px;
+}
+
+
+.flex-btns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+ 
